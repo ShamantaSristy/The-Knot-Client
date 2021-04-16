@@ -1,6 +1,6 @@
-import { Link } from '@material-ui/core';
+// import { Link } from '@material-ui/core';
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FooterCol = (props) => {
     return (
