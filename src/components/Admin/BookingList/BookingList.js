@@ -57,7 +57,7 @@ const bookingData = [
 const BookingList = () => {
     return (
         <Container>
-            <Table striped bordered hover>
+            <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>Name</th>

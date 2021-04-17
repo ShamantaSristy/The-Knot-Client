@@ -7,6 +7,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import BookingList from '../BookingList/BookingList';
+import AddService from '../AddService/AddService';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import ManageService from '../ManageService/ManageService';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,23 +62,23 @@ const AdminNav = () => {
         <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
-            <Tab label="Item Four" {...a11yProps(3)} />
+            <Tab label="Order List" {...a11yProps(0)} />
+            <Tab label="Add Service" {...a11yProps(1)} />
+            <Tab label="Make Admin" {...a11yProps(2)} />
+            <Tab label="Manage Services" {...a11yProps(3)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
           <BookingList></BookingList>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          <AddService></AddService>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          <MakeAdmin></MakeAdmin>
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item Three
+          <ManageService></ManageService>
         </TabPanel>
       </div>
     );
