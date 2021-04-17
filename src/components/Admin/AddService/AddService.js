@@ -33,14 +33,14 @@ const AddService = () => {
         fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(serviceDetails)
         })
             .then(res => console.log('server side response', res))
         
         console.log(serviceDetails);
-        // alert("Service Added SuccessFully")
+        alert("Service Added SuccessFully")
     }
 
     // const onSubmit = data => {

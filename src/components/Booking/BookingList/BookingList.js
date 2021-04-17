@@ -1,27 +1,27 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import {CardDeck, Container } from 'react-bootstrap';
+import BookingCard from './BookingCard';
 
 const BookingList = () => {
+
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+      fetch('http://localhost:5000/orders')
+          .then(res => res.json())
+          .then(data =>{
+              setOrders(data);
+              console.log(data);
+          })
+  }, [])
+
   return (
     <Container>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card" style={{ width: "18rem" }}>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card" style={{ width: "18rem" }}>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CardDeck>
+          {
+            orders?.map(order => <BookingCard order={order}></BookingCard>)
+          }
+      </CardDeck>
     </Container>
   );
 };

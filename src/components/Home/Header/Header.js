@@ -4,7 +4,7 @@ import headerImg from '../../../images/homePage.jpg';
 
 const Header = () => {
     return (
-        <Container className="mt-3">
+        <Container className="mt-3 text-center">
             <Row>
                 <Col sm={7}>
                     <Image src={headerImg} fluid />

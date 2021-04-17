@@ -8,18 +8,18 @@ import venue6 from '../../../images/venue6.jpg'
 const Gallery = () => {
     return (
         <Container className="mt-5 mb-5">
-            <h1>Some of our Works</h1>
+            <h1 style={{color: '#3282b8'}} className="text-center pt-3 pb-3 mt-5 mb-5">Some of our Works</h1>
             <CardDeck>
-                <Card style={{ width: '18rem' }}>
+                <Card >
                     <Card.Img variant="top" src={venue5} />
                 </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card >
                     <Card.Img variant="top" src={venue2} />
                 </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card >
                     <Card.Img variant="top" src={venue3} />
                 </Card>
-                <Card style={{ width: '18rem' }}>
+                <Card>
                     <Card.Img variant="top" src={venue6} />
                 </Card>
             </CardDeck>

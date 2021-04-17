@@ -1,20 +1,35 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
+import Rating from '@material-ui/lab/Rating';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box'
 
 const Review = (props) => {
-    const {quote,name,from ,img} = props.testimonial;
+    const { serviceName, description, rate } = props.review;
     return (
-        <div className="card shadow-sm">
-        <div className="card-body">
-            <p className="card-text text-center">{quote}</p>
-        </div>
-        <div className="card-footer d-flex  align-items-center">
-            <img className="mx-3" src={img} alt="" width="60"/>
-            <div>
-                <h6 className="text-primary">{name}</h6>
-                <p className="m-0">{from}</p>
-            </div>
-        </div>
-   </div>
+
+        <Card className="p-3">
+            <blockquote className="blockquote mb-0 card-body">
+                <p>
+                    <strong style={{color: '#3282b8'}} >{serviceName}</strong>
+                </p>
+                <p className="text-secondary">
+                    {description}
+                </p>
+                <div>
+                    <Box component="fieldset" mb={3} borderColor="transparent">
+                        <Typography component="legend" style={{color: '#3282b8'}}>Ratings</Typography>
+                        <Rating name="read-only" value={rate} readOnly />
+                    </Box>
+                </div>
+                <footer className="blockquote-footer">
+                    <small className="text-muted">
+                        <cite title="Source Title">Wilson</cite>
+                    </small>
+                </footer>
+            </blockquote>
+        </Card>
+
     );
 };
 

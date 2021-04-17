@@ -61,20 +61,20 @@ const BookingNav = () => {
         <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-            <Tab label="Booking and Payment" {...a11yProps(0)} />
-            <Tab label="Booking List" {...a11yProps(1)} />
-            <Tab label="Review" {...a11yProps(2)} />
+            <Tab label="Booking List" {...a11yProps(0)} />
+            <Tab label="Review" {...a11yProps(1)} />
+            {/* <Tab label="Review" {...a11yProps(2)} /> */}
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
-          <Booking></Booking>
+        <BookingList></BookingList>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <BookingList></BookingList>
+        <Review></Review>
         </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Review></Review>
-        </TabPanel>
+        {/* <TabPanel value={value} index={2}>
+         
+        </TabPanel> */}
       </div>
     );
 };

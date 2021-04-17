@@ -1,17 +1,31 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const ServiceDetail = ({service}) => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const handleOrder = () => {
+        const orderInfo = {
+          ...loggedInUser,
+          serviceName: service.serviceName,
+          description: service.description 
+        }
+        setLoggedInUser(orderInfo);
+        console.log(orderInfo);
+      }
+
     return (
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={service.img} />
+            <Card>
+                <Card.Img variant="top" src={service.imageURL} />
                 <Card.Body>
-                    <Card.Title>{service.name}</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                    <Card.Title style={{color: '#3282b8'}}>{service.serviceName}</Card.Title>
+                    <Card.Text className="text-secondary">
+                       {service.description}
                    </Card.Text>
-                   <button className="btn btn-brand text-white">Get Appointment</button>
+
+                   <Button onClick={handleOrder} className="btn btn-brand text-white" ><Link style={{ color: 'white' }} to='/checkout'>Book Now</Link></Button>
+                   {/* <button className="btn btn-brand text-white">Book Now</button> */}
                 </Card.Body>
             </Card>
     );

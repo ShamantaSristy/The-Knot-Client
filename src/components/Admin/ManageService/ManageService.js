@@ -1,24 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Container, Table } from 'react-bootstrap';
+import ManageData from './ManageData';
 
 const ManageService = () => {
 
-    // const deleteItem = id => {
+    const [services, setServices] = useState([]);
 
-    //     fetch(`https://shielded-stream-35602.herokuapp.com/deleteItem/${id}`,{
-    //         method: 'DELETE',
-    //     })
-    //     .then(response => response.json())
-    //     .then(result => {
-    //         console.log('delete item', result)
-    //     })
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => {
+                setServices(data);
+                console.log(data);
+            })
+    }, [])
 
-    //     console.log(id);
-    // }
 
     return (
-        <div>
-            <h3>Manage services</h3>
-        </div>
+        <Container>
+            <Table striped bordered hover variant="dark">
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Description</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        services?.map(service => <ManageData service={service}></ManageData>)
+                    }
+                </tbody>
+            </Table>
+        </Container>
     );
 };
 
