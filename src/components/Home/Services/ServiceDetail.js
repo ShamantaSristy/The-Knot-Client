@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import './ServiceDetail.css';
 
 const ServiceDetail = ({service}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -18,7 +19,7 @@ const ServiceDetail = ({service}) => {
 
     return (
             <Card>
-                <Card.Img variant="top" src={service.imageURL} />
+                <Card.Img className="photo-frame" variant="top" src={service.imageURL} />
                 <Card.Body>
                     <Card.Title style={{color: '#3282b8'}}>{service.serviceName}</Card.Title>
                     <Card.Text className="text-secondary">

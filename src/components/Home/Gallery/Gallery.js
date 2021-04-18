@@ -4,6 +4,7 @@ import venue2 from '../../../images/venue2.jpg'
 import venue3 from '../../../images/venue3.jpg'
 import venue5 from '../../../images/venue5.jpg'
 import venue6 from '../../../images/venue6.jpg'
+import './Gallery';
 
 const Gallery = () => {
     return (
