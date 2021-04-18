@@ -10,7 +10,7 @@ const NavigationBar = () => {
     
 
     // useEffect(()=>{
-    //     fetch('http://localhost:5000/isAdmin', {
+    //     fetch('https://fast-savannah-37591.herokuapp.com/isAdmin', {
     //         method : 'POST',
     //         headers: { 'Content-Type': 'application/json'},
     //         body: JSON.stringify({email: loggedInUser.email})
@@ -23,7 +23,7 @@ const NavigationBar = () => {
     // },[])
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/admins')
+    //     fetch('https://fast-savannah-37591.herokuapp.com/admins')
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);

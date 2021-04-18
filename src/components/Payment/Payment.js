@@ -10,7 +10,7 @@ const Payment = () => {
 
     const handleConfirmOrder = () => {
 
-        const url = 'http://localhost:5000/addOrder';
+        const url = 'https://fast-savannah-37591.herokuapp.com/addOrder';
         // console.log(orderData);
         fetch(url, {
             method: 'POST',

@@ -8,7 +8,7 @@ const BookingList = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-      fetch('http://localhost:5000/orders?email='+loggedInUser.email,{
+      fetch('https://fast-savannah-37591.herokuapp.com/orders?email='+loggedInUser.email,{
         method: 'GET',
         headers: { 'Content-Type': 'application/json'}
       })

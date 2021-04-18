@@ -28,7 +28,7 @@ const AddService = () => {
            
         };
 
-         const url = 'http://localhost:5000/addService';
+         const url = 'https://fast-savannah-37591.herokuapp.com/addService';
         // console.log(orderData);
         fetch(url, {
             method: 'POST',

@@ -14,7 +14,7 @@ const MakeAdmin = () => {
     };
 
     const handleAddAdmin = () => {
-        const url = 'http://localhost:5000/addAdmin';
+        const url = 'https://fast-savannah-37591.herokuapp.com/addAdmin';
         // console.log(orderData);
         fetch(url, {
             method: 'POST',

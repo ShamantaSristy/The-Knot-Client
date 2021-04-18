@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 const ManageData = ({service}) => {
     const deleteItem = id => {
 
-        fetch(`http://localhost:5000/deleteItem/${id}`,{
+        fetch(`https://fast-savannah-37591.herokuapp.com/deleteItem/${id}`,{
             method: 'DELETE',
         })
         .then(response => response.json())

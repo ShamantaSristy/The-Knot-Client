@@ -28,7 +28,7 @@ const Review = () => {
          
       };
 
-       const url = 'http://localhost:5000/addReview';
+       const url = 'https://fast-savannah-37591.herokuapp.com/addReview';
       // console.log(orderData);
       fetch(url, {
           method: 'POST',
