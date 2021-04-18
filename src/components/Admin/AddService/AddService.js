@@ -43,27 +43,6 @@ const AddService = () => {
         alert("Service Added SuccessFully")
     }
 
-    // const onSubmit = data => {
-    //     const orderData = {
-    //         itemName: data.name,
-    //         imageURL: imageURL,
-    //         // itemPrice: data.price
-    //     };
-
-    //     // const orderDetails = {...loggedInUser, ...orderData}
-
-    //     const url = 'http://localhost:5000/addService';
-    //     // console.log(orderData);
-    //     fetch(url, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(orderData)
-    //     })
-    //         .then(res => console.log('server side response', res))
-    // }
-
     const handleImageUpload = event => {
         console.log(event.target.files[0]);
         const imageData = new FormData();

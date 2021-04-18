@@ -9,7 +9,8 @@ const ServiceDetail = ({service}) => {
         const orderInfo = {
           ...loggedInUser,
           serviceName: service.serviceName,
-          description: service.description 
+          description: service.description ,
+          date: new Date()
         }
         setLoggedInUser(orderInfo);
         console.log(orderInfo);

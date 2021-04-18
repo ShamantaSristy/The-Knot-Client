@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Nav, Navbar } from "react-bootstrap"
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App'
 
 const NavigationBar = () => {
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    // const [isAdmin, setIsAdmin] = useState(false);
+    // const [adminEmail, setAdminEmail] = useState("");
+    
+
+    // useEffect(()=>{
+    //     fetch('http://localhost:5000/isAdmin', {
+    //         method : 'POST',
+    //         headers: { 'Content-Type': 'application/json'},
+    //         body: JSON.stringify({email: loggedInUser.email})
+    //     })
+    //     .then(res => res.json())
+    //     .then(data => console.log(data));
+    //     // setIsAdmin(true)
+    //     console.log(adminEmail);
+    //     console.log(isAdmin);
+    // },[])
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/admins')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             // console.log(data);
+    //         })
+    // }, [])
+
     return (
         <div>
             <Navbar bg="light" expand="lg" variant="light">

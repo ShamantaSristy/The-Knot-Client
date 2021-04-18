@@ -35,7 +35,7 @@ useEffect(() => {
         .then(res => res.json())
         .then(data =>{
             setServices(data);
-            console.log(data);
+            // console.log(data);
         })
 }, [])
 

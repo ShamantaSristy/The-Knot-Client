@@ -13,6 +13,7 @@ import AdminHome from './components/Admin/AdminHome/AdminHome';
 import Payment from './components/Payment/Payment';
 import { createContext, useState } from 'react';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
 
 
@@ -30,15 +31,15 @@ function App() {
         <Route path="/home">
         <Home></Home>
         </Route>
-        <Route path="/booking">
+        <PrivateRoute path="/booking">
         <BookingHomePage></BookingHomePage>
-        </Route>
-        <Route path="/admin">
+        </PrivateRoute>
+        <PrivateRoute path="/admin">
         <AdminHome></AdminHome>
-        </Route>
-        <Route path="/checkout">
+        </PrivateRoute>
+        <PrivateRoute path="/checkout">
         <Payment></Payment>
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
         <Login></Login>
         </Route>

@@ -9,9 +9,10 @@ import {
 import "./Booking.css";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
+import { Button } from "react-bootstrap";
 
 
-const Booking = () => {
+const Booking = ({setOrder, setPaymentDone}) => {
 
 
 
@@ -126,27 +127,14 @@ const Booking = () => {
 
     console.log(loggedInUser);
 
-    if(billingDetails){
+    if(paymentMethod?.id){
       const orderData = {
         ...billingDetails,
         ...paymentMethod,
         ...loggedInUser
       }
-      if(orderData.id){
-        const url = 'http://localhost:5000/addOrder';
-      // console.log(orderData);
-      fetch(url, {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(orderData)
-      })
-          .then(res => console.log('server side response', res))
-
-        console.log("Order Data",orderData);
-      }
-     
+      setOrder(orderData);
+      setPaymentDone(true);
       // alert("Payment Done")
     }
     // console.log(billingDetails,paymentMethod );
@@ -285,6 +273,7 @@ const Booking = () => {
         <CheckoutForm />
       </Elements>
     </div>
+    
         </div>
     );
 };

@@ -7,10 +7,10 @@ import FooterCol from '../FooterCol/FooterCol';
 
 const Footer = () => {
     const noNamed = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
+        {name: "Wedding Venue" , link: "/venue"},
         {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
+        {name: "Destination Wedding" , link: "/personal-treatment"},
+        {name: "Family Makeup" , link: "/tooth-extract"},
         {name: "Check Up" , link: "/checkup"},
     ]
     const ourAddress = [
@@ -19,18 +19,18 @@ const Footer = () => {
        
     ]
     const oralHealth = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
+        {name: "Wedding Events" , link: "/emergency"},
         {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
+        {name: "Engagement" , link: "/personal-treatment"},
+        {name: "Wedding Photography" , link: "/tooth-extract"},
         {name: "Check Up" , link: "/checkup"},
         {name: "Check Up" , link: "/checkup"},
         {name: "Check Up" , link: "/checkup"}
     ]
     const services = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
+        {name: "Wedding Accessories" , link: "/emergency"},
         {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
+        {name: "Dress" , link: "/personal-treatment"},
         {name: "Tooth Extraction" , link: "/tooth-extract"},
         {name: "Check Up" , link: "/checkup"},
         {name: "Check Up" , link: "/checkup"},
